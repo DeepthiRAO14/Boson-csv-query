@@ -36,8 +36,15 @@ def main():
             st.markdown(data_html, unsafe_allow_html=True)
 
             # Add a fixed image at the top right
-            image_url = "https://raw.githubusercontent.com/DeepthiRAO14/Boson-csv-query/blob/main/Boson%20Logo.webp.png"
-            st.image(image_url,  width=100)
+        image_path = "your_image_file.png"  # Replace with the actual filename and extension
+        image_url = f"data:image/png;base64,{base64.b64encode(open(image_path, 'rb').read()).decode()}"
+        
+        st.markdown(
+            f'<style>div.stImage img {{ float: right; }}</style>'
+            f'<div style="position: fixed; top: 10px; right: 10px;"><img src="{image_url}" alt="Image" width="100"></div>',
+            unsafe_allow_html=True
+        )
+
         else:
             st.warning("File is None. Please upload a CSV file.")
     except Exception as e:
