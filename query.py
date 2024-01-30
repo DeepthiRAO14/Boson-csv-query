@@ -3,8 +3,6 @@ import pandas as pd
 from langchain_experimental.agents import create_pandas_dataframe_agent
 from langchain.llms import OpenAI
 import os
-import base64
-import requests
 
 os.environ["OPENAI_API_KEY"] = "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"
 
