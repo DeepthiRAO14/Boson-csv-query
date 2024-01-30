@@ -9,7 +9,11 @@ from langchain.llms import OpenAI
 # Set OpenAI API key
 os.environ["OPENAI_API_KEY"] = "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"
 
-
+try:
+    from tabulate import tabulate
+except ImportError as e:
+    st.error(f"Error importing tabulate: {e}. Make sure it is installed.")
+    st.stop()
 
 # Define Streamlit app
 def main():
