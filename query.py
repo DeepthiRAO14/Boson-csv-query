@@ -30,7 +30,10 @@ def main():
         if file is not None:
             data = pd.read_csv(file)
             st.write("Data Preview:")
-            st.table(data.head(10))
+            data_html = data.head(10).to_html(index=False)
+            
+            # Display HTML table
+            st.markdown(data_html, unsafe_allow_html=True)
 
             # Add a fixed image at the top right
             image_url = "https://static.wixstatic.com/media/45b293_1e8973fe75e747e6b1eb16f314a752f0~mv2.png/v1/fill/w_315,h_105,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Boson%20Logo%20zoomed.png"  # Replace with the URL of your image
