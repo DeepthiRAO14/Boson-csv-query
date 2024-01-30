@@ -21,7 +21,7 @@ def main():
     st.title("BOSON Table Query App")
     with st.sidebar:
         # Add company logo at the top right
-        st.image("C:\Users\Admin\Downloads", width=100,use_column_width=False, output_format='auto')
+        st.image(r"C:\Users\Admin\Downloads\your_logo.png", width=100,use_column_width=False, output_format='auto')
     st.write("Upload a tabular file and enter a query to get an answer.")
     file = st.file_uploader("Upload tabular file", type=["csv"])
 
