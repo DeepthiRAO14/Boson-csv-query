@@ -4,6 +4,7 @@ from langchain_experimental.agents import create_pandas_dataframe_agent
 from langchain.llms import OpenAI
 import os
 import base64
+import requests
 
 os.environ["OPENAI_API_KEY"] = "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"
 
@@ -38,7 +39,10 @@ def main():
             # Add a fixed image at the top right
             image_path = "https://github.com/DeepthiRAO14/Boson-csv-query/blob/main/Bosonlogo.png"  # Replace with the actual filename and extension
             image_url = f"data:image/png;base64,{base64.b64encode(open(image_path, 'rb').read()).decode()}"
-        
+            response = requests.get(image_url)
+
+        if response.status_code == 200:
+            image_content = base64.b64encode(response.content).decode()        
             st.markdown(
                 f'<style>div.stImage img {{ float: right; }}</style>'
                 f'<div style="position: fixed; top: 10px; right: 10px;"><img src="{image_url}" alt="Image" width="100"></div>',
