@@ -37,7 +37,7 @@ def main():
         if file is not None:
             data = pd.read_csv(file)
             st.write("Data Preview:")
-            st.dataframe(data.head(10),index=False)
+            st.table(data.head(10).to_markdown(index=False, tablefmt="pipe"))
         else:
             st.warning("File is None. Please upload a CSV file.")
     except Exception as e:
