@@ -36,7 +36,7 @@ def main():
             st.markdown(data_html, unsafe_allow_html=True)
 
             # Add a fixed image at the top right
-            image_url = "https://raw.githubusercontent.com/DeepthiRAO14/Boson-csv-query/main/.png"
+            image_url = "https://raw.githubusercontent.com/DeepthiRAO14/Boson-csv-query/blob/main/Boson%20Logo.webp.png"
             st.image(image_url,  width=100)
         else:
             st.warning("File is None. Please upload a CSV file.")
