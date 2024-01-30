@@ -18,17 +18,15 @@ except ImportError as e:
 # Define Streamlit app
 def main():
       # Title and description
-    st.title("BOSON Table Query App")
-    with st.sidebar:
-        # Add company logo at the top right
-        st.image(r"https://github.com/DeepthiRAO14/Boson-csv-query/blob/main/Boson%20Logo.webp", width=100,use_column_width=False, output_format='auto')
-    st.write("Upload a tabular file and enter a query to get an answer.")
-    file = st.file_uploader("Upload tabular file", type=["csv"])
+    st.title("BOSON CSV Query App")
+    st.write("Upload a CSV file and enter a query to get an answer.")
+    file = st.file_uploader("Upload CSV file", type=["csv"])
 
     if file is None:
         st.warning("Please upload a CSV file.")
         st.stop()
 
+    st.write(f"File type: {type(file)}, File content: {file}")
 
     data = None
 
@@ -59,7 +57,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 
 
 
