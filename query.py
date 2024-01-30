@@ -36,8 +36,8 @@ def main():
             st.markdown(data_html, unsafe_allow_html=True)
 
             # Add a fixed image at the top right
-            image_url = "https://static.wixstatic.com/media/45b293_1e8973fe75e747e6b1eb16f314a752f0~mv2.png/v1/fill/w_315,h_105,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Boson%20Logo%20zoomed.png"  # Replace with the URL of your image
-            st.image(image_url,use_container_width=True)
+            image_url = "https://raw.githubusercontent.com/DeepthiRAO14/B/main/path/to/your/image/example.png"
+            st.image(image_url, caption='Boson Logo', width=100)
         else:
             st.warning("File is None. Please upload a CSV file.")
     except Exception as e:
