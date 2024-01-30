@@ -36,7 +36,7 @@ def main():
             st.markdown(data_html, unsafe_allow_html=True)
 
             # Add a fixed image at the top right
-        image_path = "your_image_file.png"  # Replace with the actual filename and extension
+        image_path = "https://github.com/DeepthiRAO14/Boson-csv-query/blob/main/Bosonlogo.png"  # Replace with the actual filename and extension
         image_url = f"data:image/png;base64,{base64.b64encode(open(image_path, 'rb').read()).decode()}"
         
         st.markdown(
