@@ -39,14 +39,12 @@ def main():
         # Check if file is not None before attempting to read it
         if file is not None:
             data = pd.read_csv(file)
-            with st.container():
-                st.write("Data Preview:")
+            with st.expander("Data Preview"):
             #st.table(data.head(10).to_markdown(index=False))
-                st.write(" ")
                 data_html = data.head(10).to_html(index=False)
             # Display HTML table
                 st.markdown(data_html, unsafe_allow_html=True)
-            st.empty()
+            st.markdown("<br>", unsafe_allow_html=True)
         else:
             st.warning("File is None. Please upload a CSV file.")
     except Exception as e:
