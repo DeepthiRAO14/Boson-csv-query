@@ -39,7 +39,8 @@ def main():
         # Check if file is not None before attempting to read it
         if file is not None:
             data = pd.read_csv(file)
-            with st.expander("Data Preview"):
+            with st.container():
+                st.write("Data Preview:")
             #st.table(data.head(10).to_markdown(index=False))
                 data_html = data.head(10).to_html(index=False)
             # Display HTML table
