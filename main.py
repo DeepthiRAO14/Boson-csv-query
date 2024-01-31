@@ -52,7 +52,7 @@ def main():
         st.error(f"Error reading CSV file: {e}")
 
     if data is not None:
-        agent = create_pandas_dataframe_agent(OpenAI(temperature=0.4), data, verbose=True)
+        agent = create_pandas_dataframe_agent(OpenAI(temperature=0), data, verbose=True)
 
         query = st.text_input("Enter a query:")
 
