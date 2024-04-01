@@ -8,7 +8,7 @@ from PIL import Image
 
 
 # Set OpenAI API key
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 
 try:
     from tabulate import tabulate
